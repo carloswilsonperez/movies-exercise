@@ -1,0 +1,30 @@
+nav {
+    background-color: #03A9F4;
+    
+    div > a {
+        color: white;
+    }
+}
+
+table {
+    button {
+        background-color: #03A9F4;
+        color: white;
+    }
+
+    button:hover {
+        background-color: gray;
+    }
+
+    tbody tr:hover {
+        background-color: #dedede;
+    }
+}
+
+footer {
+    background-color: #ffeb3b;
+    color: black;
+    height: 100px;
+    padding-top: 40px;
+    text-align: center;
+}

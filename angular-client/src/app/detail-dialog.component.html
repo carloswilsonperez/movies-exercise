@@ -1,0 +1,38 @@
+<h3 mat-dialog-title>{{data.movie.Film}}</h3>
+
+<div mat-dialog-content>
+  <div><span>Genre:</span> {{data.movie.Genre}}</div>
+  <div><span>Studio:</span> {{data.movie['Lead Studio']}}</div>
+  <div><span>User Rating:</span> {{data.movie['Audience score']}}</div>
+  <div><span>Profitability:</span> {{data.movie.Profitability}}</div>
+  <div><span>Rotten Tomatoes Rating:</span> {{data.movie['Rotten Tomatoes %']}}</div>
+  <div><span>Worldwide Gross:</span> {{data.movie['Worldwide Gross']}}</div>
+  <div><span>Year Release:</span> {{data.movie.Year}}</div>
+  <hr />
+  <div>Comments</div>
+  <br />
+
+  <div *ngFor="let comment of comments">
+    <span>{{comment.name}}:</span> {{comment.comment}}
+  </div>
+  <br />
+  <form>
+    <div class="form-group">
+      <input type="text" class="form-control" id="comment" placeholder="Your comment" #comment>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="name" placeholder="Your name" #name>
+    </div>
+  </form>
+
+</div>
+<div mat-dialog-actions>
+  <button class="left" mat-raised-button mat-dialog-close color="warn" (click)='closeDialog()'>Close</button>
+  <button class ="right" align="end" 
+    mat-raised-button 
+    color="primary" 
+    [disabled]="name.value === '' || comment.value === ''"
+    (click)='addComment(comment.value, name.value)'>
+    Save
+  </button>
+</div>

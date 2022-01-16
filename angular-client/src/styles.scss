@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+    height: 100vh;
+}
+
+div > span {
+    color: #9E9E9E;
+}
+
+.mat-dialog-content {
+    padding-bottom: 10px !important;
+}
+
+.mat-dialog-actions {
+    display: flex;
+    justify-content: space-between;
+}

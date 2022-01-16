@@ -1,0 +1,46 @@
+<!-- Bootstrap Navbar -->
+<nav class="navbar navbar-light bg-faded">
+  <div class="container">
+    <a class="navbar-brand" href="#">UI Take Home Exercise - Carlos A. Wilson, 2022</a>
+  </div>
+</nav>
+
+<div class="container">
+    <mat-form-field>
+      <mat-label>Search Movie</mat-label>
+      <input type="text" 
+          placeholder="Search Movie" 
+          matInput 
+          [formControl]="myControl"
+          [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let movie of filteredMovies | async" [value]="movie">
+            {{movie.Film}}
+          </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+
+    <!-- Bootstrap Table -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Movie</th>
+          <th scope="col">&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of movies; index as i">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{movie.Film}}</td>
+          <td> 
+            <button (click)="openDialog(movie)" mat-flat-button>View Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>
+<footer>
+  Carlos A. Wilson - Link to Personal Site: <a href="https://www.theiosdeveloper.com/">https://www.theiosdeveloper.com/</a>
+</footer>
