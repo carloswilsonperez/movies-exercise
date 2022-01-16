@@ -20,7 +20,7 @@ $ git clone https://github.com/carloswilsonperez/movies-exercise
  ### Notes on Architecture
  Here I implemented the persistence layer with MongoDB, the service layer with NodeJS with the ExpressJS Framework and the UI layer with the Angular Framework. I am using the latest versions of
  these technologies.
- ![alt Screenshot2](/screenshots/mean.jpg?raw=true)
+ ![alt Screenshot2](/screenshots/mean.jpeg?raw=true)
 
 
 
