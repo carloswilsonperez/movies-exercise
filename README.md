@@ -17,7 +17,7 @@ $ cd movies-exercise
  $ docker-compose up
  ```
 
- App should be running in `localhost:4200`. 
+ Once the above command finishes working, go to a web browser and the Angular app should be running in `localhost:4200`. 
 
  ### Notes on Architecture
  Here I implemented the persistence layer with MongoDB, the service layer with NodeJS with the ExpressJS Framework and the UI layer with the Angular Framework. I am using the latest versions of
