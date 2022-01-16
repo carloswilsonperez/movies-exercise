@@ -9,13 +9,15 @@ Make sure you have docker and Docker Desktop and git installed.
 ### Clone the repo
 ```bash
 $ git clone https://github.com/carloswilsonperez/movies-exercise
+
+$ cd movies-exercise
 ```
  ### Run docker
  ```bash
  $ docker-compose up
  ```
 
- App should be running in `localhost:4200`
+ App should be running in `localhost:4200`. 
 
  ### Notes on Architecture
  Here I implemented the persistence layer with MongoDB, the service layer with NodeJS with the ExpressJS Framework and the UI layer with the Angular Framework. I am using the latest versions of
